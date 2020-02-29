@@ -14,6 +14,8 @@ import { authSignup } from "../store/actions/auth";
 class RegistrationForm extends React.Component {
   state = {
     username: "",
+    firstname: "",
+    lastname: "",
     email: "",
     password1: "",
     password2: ""
@@ -21,16 +23,17 @@ class RegistrationForm extends React.Component {
 
   handleSubmit = e => {
     e.preventDefault();
-    const { username, email, password1, password2 } = this.state;
+    const { username, firstname, lastname, email, password1, password2 } = this.state;
     this.props.signup(username, email, password1, password2);
   };
 
   handleChange = e => {
     this.setState({ [e.target.name]: e.target.value });
+    this.setState({ username: this.state.firstname + this.state.lastname });
   };
 
   render() {
-    const { username, email, password1, password2 } = this.state;
+    const { username, firstname, lastname, email, password1, password2 } = this.state;
     const { error, loading, token } = this.props;
     if (token) {
       return <Redirect to="/" />;
@@ -52,12 +55,21 @@ class RegistrationForm extends React.Component {
               <Segment stacked>
                 <Form.Input
                   onChange={this.handleChange}
-                  value={username}
-                  name="username"
+                  value={firstname}
+                  name="firstname"
                   fluid
                   icon="user"
-                  iconPosition="left"
-                  placeholder="Username"
+                  iconPosition="right"
+                  placeholder="Firstname"
+                />
+                <Form.Input
+                  onChange={this.handleChange}
+                  value={lastname}
+                  name="lastname"
+                  fluid
+                  icon="user"
+                  iconPosition="right"
+                  placeholder="Lastname"
                 />
                 <Form.Input
                   onChange={this.handleChange}
@@ -65,7 +77,7 @@ class RegistrationForm extends React.Component {
                   name="email"
                   fluid
                   icon="mail"
-                  iconPosition="left"
+                  iconPosition="right"
                   placeholder="E-mail address"
                 />
                 <Form.Input
@@ -74,7 +86,7 @@ class RegistrationForm extends React.Component {
                   value={password1}
                   name="password1"
                   icon="lock"
-                  iconPosition="left"
+                  iconPosition="right"
                   placeholder="Password"
                   type="password"
                 />
@@ -84,7 +96,7 @@ class RegistrationForm extends React.Component {
                   value={password2}
                   name="password2"
                   icon="lock"
-                  iconPosition="left"
+                  iconPosition="right"
                   placeholder="Confirm password"
                   type="password"
                 />

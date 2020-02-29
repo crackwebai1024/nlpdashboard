@@ -54,7 +54,7 @@ class LoginForm extends React.Component {
                   name="username"
                   fluid
                   icon="user"
-                  iconPosition="left"
+                  iconPosition="right"
                   placeholder="Username"
                 />
                 <Form.Input
@@ -62,8 +62,8 @@ class LoginForm extends React.Component {
                   fluid
                   value={password}
                   name="password"
-                  icon="lock"
-                  iconPosition="left"
+                  icon="eye"
+                  iconPosition="right"
                   placeholder="Password"
                   type="password"
                 />
