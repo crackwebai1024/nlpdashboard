@@ -1,0 +1,43 @@
+.gray {
+    background-color: rgb(187, 186, 186) !important;
+}
+
+.custombtn {
+    width : 100% !important;
+    height : 50px !important;
+}
+
+hr{ 
+    height: 1px !important;
+    border: none;
+    width : 70% ;
+    text-align : center;
+  }
+
+.customcolumn{
+    width : 100% !important;
+    height : 500px;
+    background-color: rgb(187, 186, 186) !important;
+    padding : 70px 15px 70px 15px !important;
+    border-radius: 15px;
+}
+
+.yellow {
+    background-color: rgb(231, 208, 2) !important;
+}
+
+.green {
+    background-color: rgb(19, 180, 4) !important;
+}
+
+.blue {
+    background-color: rgb(9, 156, 224) !important;
+}
+
+.third{
+    margin : 30px 0px 30px 0px !important;
+}
+
+.fourth{
+    margin : 15px 0px 15px 0px !important;
+}
