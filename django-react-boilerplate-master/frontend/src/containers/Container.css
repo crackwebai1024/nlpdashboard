@@ -7,6 +7,12 @@
     height : 50px !important;
 }
 
+.sidebtn {
+    width : 100% !important;
+    height : 45px !important;
+    margin : 3px !important;
+}
+
 hr{ 
     height: 1px !important;
     border: none;
@@ -40,4 +46,88 @@ hr{
 
 .fourth{
     margin : 15px 0px 15px 0px !important;
+}
+
+.comicfirst{
+    font-family : Comic Sans Ms;
+    font-size: 22px ;
+    margin : 30px 0px 0px 50px !important;
+    padding-bottom: 3px ;
+}
+
+.comicsecond{
+    font-family : Comic Sans Ms;
+    font-size: 19px ;
+    margin : 0px 0px 30px 60px !important ;
+    padding-top: 0px ;
+}
+
+.foreyellow{
+    color : rgb(100, 100, 3) ;
+}
+
+.column{
+    height : 700px !important ;
+}
+
+.darkyellow{
+    background-color: rgb(153, 126, 5) !important;
+    margin : 0px 15px 0px 15px !important;
+}
+
+.browse{
+    height: 34px !important;
+    width: 90%;
+    margin : 0px !important;
+    float : right !important;
+}
+
+.custominput{
+    margin-left:0px !important;
+}
+
+.mid{
+    padding: 10px 20px 10px 20px !important;
+}
+
+.restxt{
+    padding: 10px 5px 10px 5px !important;
+}
+
+.long{
+    width: 35% !important;
+    height: 34px !important;
+}
+
+.short{
+    width: 20% !important;
+    height: 34px !important;
+}
+
+.last{
+    float: right !important;
+    margin : 0px 0px 0px 20px !important;
+}
+
+.result{
+    width: 60% !important;
+    margin: 8% 20% 25% 20% !important;
+}
+
+.resinttxt{
+    background-color: rgba(189, 189, 189, 0.863) !important;
+}
+
+.cuscircle {
+    height: 30px;
+    width: 30px;
+    margin : 10px;
+    border-radius: 50%;
+    display: inline-block;
+    text-align: center;
+    padding-top: 5px;
+  }
+
+.custitle{
+    margin-top: 15px;
 }

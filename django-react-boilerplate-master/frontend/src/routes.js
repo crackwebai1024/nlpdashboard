@@ -6,6 +6,7 @@ import Login from "./containers/Login";
 import Signup from "./containers/Signup";
 import HomepageLayout from "./containers/Home";
 import NlpDashboard from "./containers/NLPDashboard";
+import NlpProcessing from "./containers/NLPProcessing";
 
 const BaseRouter = () => (
   <Hoc>
@@ -13,6 +14,7 @@ const BaseRouter = () => (
     <Route path="/signup" component={Signup} />
     <Route exact path="/" component={HomepageLayout} />
     <Route path="/nlpdashboard" component={NlpDashboard} />
+    <Route path="/nlpprocessing" component={NlpProcessing} />
   </Hoc>
 );
 
