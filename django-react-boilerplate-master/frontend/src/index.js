@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useReducer } from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
 import registerServiceWorker from "./registerServiceWorker";
@@ -8,11 +8,13 @@ import thunk from "redux-thunk";
 import 'bootstrap/dist/css/bootstrap.css';
 
 import authReducer from "./store/reducers/auth";
+import userReducer from "./store/reducers/user";
 
 const composeEnhances = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 const rootReducer = combineReducers({
-  auth: authReducer
+  auth: authReducer,
+  user: userReducer
 });
 
 const store = createStore(rootReducer, composeEnhances(applyMiddleware(thunk)));

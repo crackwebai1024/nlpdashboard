@@ -29,15 +29,15 @@ class CustomLayout extends React.Component {
                 Logout
               </Menu.Item>
             ) : (
-              <React.Fragment>
-                <Link to="/login">
-                  <Menu.Item header>Login</Menu.Item>
-                </Link>
-                <Link to="/signup">
-                  <Menu.Item header>Signup</Menu.Item>
-                </Link>
-              </React.Fragment>
-            )}
+                <React.Fragment>
+                  <Link to="/login">
+                    <Menu.Item header>Login</Menu.Item>
+                  </Link>
+                  <Link to="/signup">
+                    <Menu.Item header>Signup</Menu.Item>
+                  </Link>
+                </React.Fragment>
+              )}
           </Container>
         </Menu>
 
