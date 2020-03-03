@@ -23,7 +23,8 @@ class NlpProcessing extends Component {
     state = {
         present: false,
         title: "CLASSIFICATION",
-        category: "Sentiment Analysis"
+        category: "Sentiment Analysis",
+        buttoncaption: "Analysis"
     }
 
     move_to_nlpdashboard = e => {
@@ -43,45 +44,45 @@ class NlpProcessing extends Component {
             if (titleid == "1") {
                 switch (categoryid) {
                     case "1":
-                        this.setState({ present: true, title: "CLASSIFICATION", category: "Sentiment Analysis" });
+                        this.setState({ present: true, title: "CLASSIFICATION", category: "Sentiment Analysis", buttoncaption: "Analysis" });
                         break;
                     case "2":
-                        this.setState({ present: true, title: "CLASSIFICATION", category: "Topic Detection" });
+                        this.setState({ present: true, title: "CLASSIFICATION", category: "Topic Detection", buttoncaption: "Detect" });
                         break;
                     case "3":
-                        this.setState({ present: true, title: "CLASSIFICATION", category: "Language Detection" });
+                        this.setState({ present: true, title: "CLASSIFICATION", category: "Language Detection", buttoncaption: "Detect" });
                         break;
                 }
             }
             if (titleid == "2") {
                 switch (categoryid) {
                     case "1":
-                        this.setState({ present: true, title: "EXTRACTION", category: "Summarization" });
+                        this.setState({ present: true, title: "EXTRACTION", category: "Summarization", buttoncaption: "Summarize" });
                         break;
                     case "2":
-                        this.setState({ present: true, title: "EXTRACTION", category: "Entity Extraction" });
+                        this.setState({ present: true, title: "EXTRACTION", category: "Entity Extraction", buttoncaption: "Extract" });
                         break;
                     case "3":
-                        this.setState({ present: true, title: "EXTRACTION", category: "Keyword Extraction" });
+                        this.setState({ present: true, title: "EXTRACTION", category: "Keyword Extraction", buttoncaption: "Extract" });
                         break;
                     case "4":
-                        this.setState({ present: true, title: "EXTRACTION", category: "Article Extraction" });
+                        this.setState({ present: true, title: "EXTRACTION", category: "Article Extraction", buttoncaption: "Extract" });
                         break;
                 }
             }
             if (titleid == "3") {
                 switch (categoryid) {
                     case "1":
-                        this.setState({ present: true, title: "TEXT PROCESS", category: "Stemmer" });
+                        this.setState({ present: true, title: "TEXT PROCESS", category: "Stemmer", buttoncaption: "Stemmer" });
                         break;
                     case "2":
-                        this.setState({ present: true, title: "TEXT PROCESS", category: "Tokenizer" });
+                        this.setState({ present: true, title: "TEXT PROCESS", category: "Tokenizer", buttoncaption: "Tokenize" });
                         break;
                     case "3":
-                        this.setState({ present: true, title: "TEXT PROCESS", category: "Normalizer" });
+                        this.setState({ present: true, title: "TEXT PROCESS", category: "Normalizer", buttoncaption: "Nomalize" });
                         break;
                     case "4":
-                        this.setState({ present: true, title: "TEXT PROCESS", category: "Similarity" });
+                        this.setState({ present: true, title: "TEXT PROCESS", category: "Similarity", buttoncaption: "Similarity" });
                         break;
                 }
             }
@@ -96,17 +97,17 @@ class NlpProcessing extends Component {
                 <div className="row">
                     <div className="col-md-2"></div>
                     <div className="col-md-8 row column">
-                        <div className="col-sm-3" style={{ backgroundColor: "gray" }}>
+                        <div className="col-sm-3 gray">
                             <div className="row">
                                 <span className="cuscircle yellow"><h5 style={{ color: "white" }}>1</h5></span>
-                                <h5 className="custitle" style={{ color: "yellow" }}>CLASSIFICATIONS</h5>
+                                <h5 className="custitle foreyellow">CLASSIFICATIONS</h5>
                             </div>
                             <Button className="btn btn-success sidebtn yellow"><h5>Sentiment Analysis</h5></Button>
                             <Button className="btn btn-success sidebtn yellow"><h5>Topic Detection</h5></Button>
                             <Button className="btn btn-success sidebtn yellow"><h5>Language Detection</h5></Button>
                             <div className="row">
                                 <span className="cuscircle green"><h5 style={{ color: "white" }}>2</h5></span>
-                                <h5 className="custitle" style={{ color: "green" }}>EXTRACTION</h5>
+                                <h5 className="custitle foregreen">EXTRACTION</h5>
                             </div>
                             <Button className="btn btn-success sidebtn green"><h5>Summarization</h5></Button>
                             <Button className="btn btn-success sidebtn green"><h5>Entity Extraction</h5></Button>
@@ -114,7 +115,7 @@ class NlpProcessing extends Component {
                             <Button className="btn btn-success sidebtn green"><h5>Article Extraction</h5></Button>
                             <div className="row">
                                 <span className="cuscircle blue"><h5 style={{ color: "white" }}>3</h5></span>
-                                <h5 className="custitle" style={{ color: "blue" }}>TEXT PROCESS</h5>
+                                <h5 className="custitle foreblue">TEXT PROCESS</h5>
                             </div>
                             <Button className="btn btn-success sidebtn blue"><h5>Stemmer</h5></Button>
                             <Button className="btn btn-success sidebtn blue"><h5>Tokenizer</h5></Button>
@@ -125,9 +126,9 @@ class NlpProcessing extends Component {
                             <p className="comicfirst foreyellow">{this.state.title}</p>
                             <p className="comicsecond">{this.state.category}</p>
                             <div className="row mid">
-                                <Button className="btn btn-success darkyellow long"><h5 style={{ color: "white" }}>Load Data</h5></Button>
-                                <Button className="btn btn-success darkyellow short"><h5 style={{ color: "white" }}>Text</h5></Button>
-                                <Button className="btn btn-success last darkyellow short"><h5 style={{ color: "white" }}>Url</h5></Button>
+                                <Button className="btn darkyellow long"><h5 className="georgia">Load Data</h5></Button>
+                                <Button className="btn darkyellow short"><h5 className="georgia">Text</h5></Button>
+                                <Button className="btn last darkyellow short"><h5 className="georgia">Url</h5></Button>
                             </div>
                             <div className="row mid">
                                 <div className="col-sm-8 cusmargin">
@@ -135,21 +136,23 @@ class NlpProcessing extends Component {
                                 </div>
                                 <input type="file" ref={input => this.inputElement = input} hidden></input>
                                 <div className="col-sm-4">
-                                    <button className="btn btn-success browse darkyellow" onClick={this.file_load}><h5>Browse</h5></button>
+                                    <button className="btn browse darkyellow" onClick={this.file_load}><h5 className="georgia">Browse</h5></button>
                                 </div>
                             </div>
                             <div className="form-group mid">
                                 <textarea class="form-control" rows="15"></textarea>
                             </div>
-                            <Button className="btn btn-success result darkyellow"><h5>Analysis</h5></Button>
+                            <Button className="btn btn-success result darkyellow"><h5 className="georgia">{this.state.buttoncaption}</h5></Button>
                         </div>
-                        <div className="col-sm-3" style={{ backgroundColor: "gray" }}>
+                        <div className="col-sm-3 gray">
                             <div style={{ height: 100 }}>
                                 <button className="btn back" onClick={this.move_to_nlpdashboard}><a href="#">
                                     <span class="glyphicon glyphicon-fast-backward"></span>
                                 </a></button>
                             </div>
-                            <Button className="btn btn-success result"><h5>Result</h5></Button>
+                            <div className="col-sm-12">
+                                <div className="cusdiv result"><h4 className="georgia">Result</h4></div>
+                            </div>
                             <div className="form-group restxt">
                                 <textarea class="form-control resinttxt" rows="15"></textarea>
                             </div>

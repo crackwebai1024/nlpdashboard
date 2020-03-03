@@ -37,17 +37,17 @@ class NlpDashboard extends Component {
             <div>
                 <div style={{ height: 60 }}>
                 </div>
-                <div className="row gray" style={{ height: 65, padding: 7.5 }}>
+                <div className="row backgray" style={{ height: 65, padding: 7.5 }}>
                     <div className="col-md-2"></div>
                     <div className="col-md-8 row">
                         <div className="col-sm-4">
-                            <Button className="btn btn-success custombtn"><h4>CLASSIFICATION</h4></Button>
+                            <div className="cusdiv"><h4 className="georgia">CLASSIFICATION</h4></div>
                         </div>
                         <div className="col-sm-4">
-                            <Button className="btn btn-success custombtn"><h4>EXTRACTION</h4></Button>
+                            <div className="cusdiv"><h4 className="georgia">EXTRACTION</h4></div>
                         </div>
                         <div className="col-sm-4">
-                            <Button className="btn btn-success custombtn"><h4>TEXT PROCESSING</h4></Button>
+                            <div className="cusdiv"><h4 className="georgia">TEXT PROCESSING</h4></div>
                         </div>
                     </div>
                 </div>
